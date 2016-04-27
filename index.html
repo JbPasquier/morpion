@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Morpion</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/libs/angular.min.js"></script>
+        <script src="js/controllers/mainController.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+    <body ng-controller='mainController'>
+        <h1>Wild Morpion</h1>
+        <table>
+            <tr>
+                <td ng-click='toggle("A1")' class='A1'>{{A1}}</td>
+                <td ng-click='toggle("A2")' class='A2'>{{A2}}</td>
+                <td ng-click='toggle("A3")' class='A3'>{{A3}}</td>
+            </tr>
+            <tr>
+                <td ng-click='toggle("B1")' class='B1'>{{B1}}</td>
+                <td ng-click='toggle("B2")' class='B2'>{{B2}}</td>
+                <td ng-click='toggle("B3")' class='B3'>{{B3}}</td>
+            </tr>
+            <tr>
+                <td ng-click='toggle("C1")' class='C1'>{{C1}}</td>
+                <td ng-click='toggle("C2")' class='C2'>{{C2}}</td>
+                <td ng-click='toggle("C3")' class='C3'>{{C3}}</td>
+            </tr>
+        </table>
+        <div class="answer">
+            <h2 ng-show='winner === 1'>Player 1 won</h2>
+            <h2 ng-show='winner === 2'>Player 2 won</h2>
+            <h2 ng-show='winner === 0'>Ex Aequo</h2>
+        </div>
+    </body>
+</html>
